@@ -1,0 +1,7 @@
+1) check the car IP from arduino IDE
+2) check the ESP32Cam IP from arduino IDE
+3) Check the IP status for the esp32cam and the RC car ESP32
+
+
+
+ 

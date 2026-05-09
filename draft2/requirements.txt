@@ -1,0 +1,4 @@
+numpy>=1.26
+opencv-contrib-python>=4.9
+paho-mqtt>=1.6
+torch>=2.2
