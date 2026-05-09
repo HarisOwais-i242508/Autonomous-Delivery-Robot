@@ -6,10 +6,10 @@ Everything for the real-car pipeline lives in this folder.
 
 | Board | Sketch |
 |--------|--------|
-| **RC car ESP32** (Wi‑Fi + web UI, `/cmd`, `/status`, etc.) | `esp_RC_Car_code_draft_test2/esp_RC_Car_code_draft_test2.ino` |
+| **RC car ESP32** (Wi‑Fi + web UI, `/cmd`, `/status`, etc.) | `rc_esp32/rc_esp32.ino` |
 | **ESP32‑CAM** (MJPEG stream for OpenCV) | `esp32cam_stream/esp32cam_stream.ino` |
 
-There is also `draft2.ino` — same car, **MQTT** command/ack for `run_real_car.py` (RL loop). Use that path if you are not using the dashboard web car.
+There is also `AutonomousDeliveryRobot.ino` — same car, **MQTT** command/ack for `run_real_car.py` (RL loop). Use that path if you are not using the dashboard web car.
 
 Set Wi‑Fi credentials in each sketch to match your router. After flashing, note each device’s IP (serial monitor or router DHCP list).
 
@@ -43,7 +43,7 @@ Use `python real_run_dashboard.py --help` for more options.
 
 - **Camera / CV only:**  
   `python cv_stream_test.py --camera-url http://<cam-ip>/stream`
-- **RL + MQTT car** (needs `draft2.ino` + broker + `dqn_model.pth`):  
+- **RL + MQTT car** (needs `AutonomousDeliveryRobot.ino` + broker + `dqn_model.pth`):  
   `python run_real_car.py --camera-url http://<cam-ip>/stream --goals …`  
   See `config.py` for MQTT and map settings.
 
@@ -70,5 +70,5 @@ python make_6in_aruco_pdf.py
 
 ## Notes
 
-- Put trained **`dqn_model.pth`** in this `draft2` directory when using `run_real_car.py` (or set `MODEL_PATH` in `config.py`).
+- Put trained **`dqn_model.pth`** in this `AutonomousDeliveryRobot` directory when using `run_real_car.py` (or set `MODEL_PATH` in `config.py`).
 - Stream port/path can differ (e.g. `:81/stream` vs `/stream`); always match whatever your flashed `esp32cam_stream.ino` exposes.
