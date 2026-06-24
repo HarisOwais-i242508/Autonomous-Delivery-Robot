@@ -1,6 +1,6 @@
 # Autonomous-Delivery-Robot
 
-Everything for the real-car pipeline lives in this folder.
+Everything for the real-car pipeline lives in this folder. (Refer to `System Flow Diagram.pdf` and `Circuit Diagram.pdf` for basic comprehension of the system)
 
 ## Firmware (flash before anything else)
 
